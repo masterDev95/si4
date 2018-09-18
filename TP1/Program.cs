@@ -106,6 +106,7 @@ namespace TP1
             //Affichage montant frais de port
             prixFDP = (prixTotal * fdp);
 
+            
 
 
             //Montant final
