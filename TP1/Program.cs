@@ -10,112 +10,133 @@ namespace TP1
     {
         static void Main(string[] args)
         {
-            /*
-            //Programme d'introduction
-            //DECLARATION DE VARIABLE
-            string chaineSaisie = "";
+            int choix;
+
+            Console.WriteLine("\t-Calcul de moyenne(1)");
+            Console.WriteLine("\t-Calcul de prix TTC(2)");
+            Console.WriteLine("\t-Gestion de commande pour société(3)");
+            Console.WriteLine("\t-Transformation du temps en secondes(4)");
+
+            Console.WriteLine("Veuillez choisir la fonction que vous voulez (1-4)");
+            choix = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            switch (choix)
+            {
+                case 1:
+                    moyenne();
+                    break;
+                case 2:
+                    calculPrixTTC();
+                    break;
+                case 3:
+                    gestionCommande();
+                    break;
+                case 4:
+                    tempsEnSecondes();
+                    break;
+                default:
+                    Console.WriteLine("Désolé, je n'ai pas compris votre requête..");
+                    break;
+            }
+        }
+
+        private static void tempsEnSecondes()
+        {
+            //DECLARATION DE VARAIABLE
+            int heures, minutes, secondes, secondesTotal;
 
             //INTERACTION
-            Console.WriteLine("Bonjour quel est votre nom ?");
-            chaineSaisie = Console.ReadLine();
-            Console.WriteLine("Enchanté {0}",chaineSaisie);
-            */
+            Console.WriteLine("Saisir le nombre d'heure: ");
+            heures = Convert.ToInt32(Console.ReadLine());
 
-            //===================================================================================================
+            Console.WriteLine("\nSaisir le nombre de minutes: ");
+            minutes = Convert.ToInt32(Console.ReadLine());
 
-            /*
-            //Exercice 1
+            Console.WriteLine("\nSaisir le nombre de secondes: ");
+            secondes = Convert.ToInt32(Console.ReadLine());
+
+            //Affiche ce que l'utilisateur à saisie
+            Console.WriteLine("\n\nVous avez saisie {0} heures, {1} minutes et {2} secondes.", heures, minutes, secondes);
+
+            //AFFICHAGE FINAL
+            secondesTotal = (heures * 60 * 60) + (minutes * 60) + secondes;
+            Console.WriteLine("Ce qui correspond à {0} secondes.\n\n\n", secondesTotal);
+        }
+
+        private static void gestionCommande()
+        {
             //DECLARATION DE VARIABLE
-            decimal val1, val2, val3, resultat = 0;
+            decimal prixUnitaire, quantite, prixTotal, montantRemise, montantFDP, montantFinal;
+            const decimal remise = 5, fdp = 2;
 
             //INTERACTION
-            Console.WriteLine("Bonjour, ce programme consiste à calculer la moyenne de 3 nombres saisis");
+            Console.WriteLine("Quel est le prix de votre article à l'unité ?");
+            prixUnitaire = Convert.ToDecimal(Console.ReadLine());
 
-            //Valeur 1
-            Console.WriteLine("\nVeuillez saisir le premier nombre :");
+            Console.WriteLine("\nPour quelle quantité ?");
+            quantite = Convert.ToDecimal(Console.ReadLine());
+
+            //AFFICHAGE FINAL
+            //Affichage montant total sans remise et frais de port
+            prixTotal = prixUnitaire * quantite;
+            Console.WriteLine("\n\n\t- Prix sans frais: {0} euros", prixTotal);
+
+            //Affichage remise
+            montantRemise = (remise / 100) * prixTotal;
+            Console.WriteLine("\t- Remise: {0} euros", montantRemise);
+
+            //Affichage frais de port
+            montantFDP = (fdp / 100) * prixTotal;
+            Console.WriteLine("\t- Frais de port: {0} euros", montantFDP);
+
+            //Affichage montant final
+            montantFinal = prixTotal - montantRemise + montantFDP;
+            Console.WriteLine("\t- Montant final: {0} euros\n\n\n", montantFinal);
+        }
+
+        private static void calculPrixTTC()
+        {
+            //DECLARATION DE VARIABLE
+            decimal prixUnitaire, quantite, taux, prixTTC;
+
+            //INTERACTION
+            Console.WriteLine("Quel est le prix de votre article à l'unité ?");
+            prixUnitaire = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("\nPour quelle quantité ?");
+            quantite = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("\nQuel est le taux de la valeur ajouté (pourcentage) ?");
+            taux = Convert.ToDecimal(Console.ReadLine());
+
+            //Calcul prix total TTC et affichage
+            prixTTC = prixUnitaire * quantite;
+            prixTTC = (taux / 100 * prixTTC) + prixTTC;
+            Console.WriteLine("\nLe montant total TTC est de {0} euros\n\n\n", prixTTC);
+        }
+
+        static void moyenne() //Calcule la moyenne de 3 nombres saisis
+        {
+            //DECLARATION DE VARIABLE
+            decimal val1, val2, val3, moyenne;
+
+            //INTERACTION
+            //PREMIER NOMBRE
+            Console.WriteLine("Veuillez saisir un nombre:");
             val1 = Convert.ToDecimal(Console.ReadLine());
 
-            //Valeur 2
-            Console.WriteLine("\nVeuillez saisir le deuxième nombre :");
+            //DEUXIEME NOMBRE
+            Console.WriteLine("\nVeuillez saisir un deuxième nombre:");
             val2 = Convert.ToDecimal(Console.ReadLine());
 
-            //Valeur 3
-            Console.WriteLine("\nVeuillez saisir le troisième nombre :");
+            //TROISIEME NOMBRE
+            Console.WriteLine("\nVeuille saisir un troisième nombre:");
             val3 = Convert.ToDecimal(Console.ReadLine());
 
-            //Calcul final
-            resultat = (val1 + val2 + val3) / 3;
-            Console.WriteLine("\nVoici la moyenne des trois valeurs : {0}", resultat);
-            */
-
-            //===================================================================================================
-
-            /*
-            //Exercice 2
-            //DECLARATION DE VARIABLE
-            decimal prixUnitaire, quantite, taux, resultat = 0;
-
-            //INTERACTION
-            Console.WriteLine("Bonjour, ce programme consiste à calculer le prix total d'un article TTC");
-
-            //Prix unitaire
-            Console.WriteLine("\nVeuillez saisir le prix à l'unité de l'article :");
-            prixUnitaire = Convert.ToDecimal(Console.ReadLine());
-
-            //Quantité
-            Console.WriteLine("\nVeuillez saisir la quantité :");
-            quantite = Convert.ToDecimal(Console.ReadLine());
-
-            //Taux
-            Console.WriteLine("\nVeuillez saisir le pourcentage du taux :");
-            taux = Convert.ToDecimal(Console.ReadLine())/100;
-
-            //Montant TTC
-            resultat = (prixUnitaire * quantite);
-            resultat = (resultat * taux) + resultat;
-            Console.WriteLine("\nVoici le montant TTC à payer : {0}", resultat);
-            */
-
-            //===================================================================================================
-
-            //Exercice 3
-            //DECLARATION DE VARIABLE
-            decimal prixUnitaire, quantite, prixTotal, prixRemise, prixFDP, resultat = 0;
-            decimal remise = 0.05;
-            decimal fdp = 0.02;
-
-            //INTERACTION
-            Console.WriteLine("Bonjour, ce programme consiste à calculer le prix total pour une société");
-
-            //Prix unitaire
-            Console.WriteLine("\nVeuillez saisir le prix à l'unité de l'article :");
-            prixUnitaire = Convert.ToDecimal(Console.ReadLine());
-
-            //Quantité
-            Console.WriteLine("\nVeuillez saisir la quantité :");
-            quantite = Convert.ToDecimal(Console.ReadLine());
-
-            //Affichage montant sans frais
-            prixTotal = prixUnitaire * quantite;
-            Console.WriteLine("\nPrix total HT: {0} euros", prixTotal);
-
-            //Affichage montant remise
-            prixRemise = (prixTotal / remise);
-            Console.WriteLine("Remise: {0}", prixRemise);
-
-            //Affichage montant frais de port
-            prixFDP = (prixTotal * fdp);            
-
-
-            //Montant final
-            resultat = (prixUnitaire * quantite);
-            resultat = (resultat * taux) + resultat;
-            Console.WriteLine("\nVoici le montant TTC à payer : {0}", resultat);
-
-            //===================================================================================================
-
-            Console.WriteLine("\nAppuyez sur Entrée pour fermer le programme...");
-            Console.ReadLine();
+            //CALCUL DE LA MOYENNE ET AFFICHAGE DU RESULTAT
+            moyenne = (val1 + val2 + val3) / 3;
+            Console.WriteLine("\nLa moyenne de ces trois nombre est {0}\n\n\n", moyenne);
         }
     }
 }
