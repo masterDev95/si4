@@ -104,9 +104,7 @@ namespace TP1
             Console.WriteLine("Remise: {0}", prixRemise);
 
             //Affichage montant frais de port
-            prixFDP = (prixTotal * fdp);
-
-            
+            prixFDP = (prixTotal * fdp);            
 
 
             //Montant final
