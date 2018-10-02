@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1", "TP1\TP1.csproj", "{A3FDA685-A334-42FF-9F57-ADABB4288027}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3", "TP3\TP3.csproj", "{3FBAD25F-EF5E-4483-A3BB-87DD3D936B32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP4", "TP4\TP4.csproj", "{B032F78C-638F-4E44-99AE-A5F5A3C26924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tpNote1", "tpNote1\tpNote1.csproj", "{EC09620E-BEC5-4B1D-A861-F7C408B920D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B032F78C-638F-4E44-99AE-A5F5A3C26924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B032F78C-638F-4E44-99AE-A5F5A3C26924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B032F78C-638F-4E44-99AE-A5F5A3C26924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC09620E-BEC5-4B1D-A861-F7C408B920D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC09620E-BEC5-4B1D-A861-F7C408B920D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC09620E-BEC5-4B1D-A861-F7C408B920D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC09620E-BEC5-4B1D-A861-F7C408B920D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
