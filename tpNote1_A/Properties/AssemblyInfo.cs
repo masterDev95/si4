@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de 
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("TP1B")]
+[assembly: AssemblyTitle("tpNote1_A")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TP1B")]
+[assembly: AssemblyProduct("tpNote1_A")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("24709548-f86f-4878-805e-d70dcc4f4d5c")]
+[assembly: Guid("1e97b921-a3ac-49dd-a0cf-e1591c6f3c3f")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
