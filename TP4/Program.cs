@@ -78,6 +78,10 @@ namespace TP4
                 {
                     aEnlever.Add(valeur);
                 }
+                else if (valeur % 5 == 0 && valeur != 5)
+                {
+                    aEnlever.Add(valeur);
+                }
                 else if (valeur % 7 == 0 && valeur != 7)
                 {
                     aEnlever.Add(valeur);
@@ -94,6 +98,8 @@ namespace TP4
             {
                 Console.WriteLine(valeur);
             }
+
+            Console.ReadLine();
         }
     }
 }
