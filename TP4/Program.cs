@@ -10,8 +10,8 @@ namespace TP4
     {
         static void Main(string[] args)
         {
-            List<int> tableau = new List<int>();
-            List<int> aEnlever = new List<int>();
+            int[] tableau = new int[10];
+            int[] aEnlever = new int[10];
             string saisie;
             bool affiche = true;
 
@@ -20,32 +20,32 @@ namespace TP4
             for (int i = 0; i < 10; i++)
             {
                 saisie = Console.ReadLine();
-                tableau.Add(Convert.ToInt32(saisie));
+                tableau[i] = Convert.ToInt32(saisie);
             }
 
             //2
             Console.WriteLine("\nVoici ce que vous avez saisi:");
 
-            foreach (int valeur in tableau)
+            for (int i = 0; i < tableau.Count(); i++)
             {
-                Console.WriteLine(valeur);
+                Console.WriteLine(tableau[i]);
             }
 
             //3
             Console.WriteLine("\nVoici ce que vous avez saisi (1 valeur sur 2):");
 
-            foreach (int valeur in tableau)
+            for (int i = 0; i < tableau.Count(); i++)
             {
-                if (affiche) Console.WriteLine(valeur);
+                if (affiche) Console.WriteLine(tableau[i]);
                 affiche = !affiche;
             }
 
             //4
             Console.WriteLine("\nVoici les paires de ce que vous avez saisi:");
 
-            foreach (int valeur in tableau)
+            for (int i = 0; i < tableau.Count(); i++)
             {
-                if (valeur % 2 == 0) Console.WriteLine(valeur);
+                if (tableau[i] % 2 == 0) Console.WriteLine(tableau[i]);
             }
 
             //5
@@ -68,35 +68,32 @@ namespace TP4
             Console.WriteLine("\nVoici les nombres premiers que vous avez saisi:");
 
             //SUPPRESSION VALEURES NON PREMIERES
-            foreach (int valeur in tableau)
+            for (int i = 0; i < tableau.Count(); i++)
             {
-                if (valeur % 2 == 0 && valeur != 2)
+                if (tableau[i] == 1)
                 {
-                    aEnlever.Add(valeur);
+                    continue;
                 }
-                else if (valeur % 3 == 0 && valeur != 3)
+                else if (tableau[i] % 2 == 0 && tableau[i] != 2)
                 {
-                    aEnlever.Add(valeur);
+                    continue;
                 }
-                else if (valeur % 5 == 0 && valeur != 5)
+                else if (tableau[i] % 3 == 0 && tableau[i] != 3)
                 {
-                    aEnlever.Add(valeur);
+                    continue;
                 }
-                else if (valeur % 7 == 0 && valeur != 7)
+                else if (tableau[i] % 5 == 0 && tableau[i] != 5)
                 {
-                    aEnlever.Add(valeur);
+                    continue;
                 }
-            }
-
-            foreach (int valeur in aEnlever)
-            {
-                tableau.Remove(valeur);
-            }
-
-            //AFFICHAGE
-            foreach (int valeur in tableau)
-            {
-                Console.WriteLine(valeur);
+                else if (tableau[i] % 7 == 0 && tableau[i] != 7)
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine(tableau[i]);
+                }
             }
 
             Console.ReadLine();
