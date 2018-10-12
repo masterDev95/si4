@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tpNote1", "tpNote1\tpNote1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tpNote1_A", "tpNote1_A\tpNote1_A.csproj", "{1E97B921-A3AC-49DD-A0CF-E1591C6F3C3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triangle.csproj", "{F1CBD01E-95D4-4526-A5D9-F64516AA3575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1E97B921-A3AC-49DD-A0CF-E1591C6F3C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E97B921-A3AC-49DD-A0CF-E1591C6F3C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E97B921-A3AC-49DD-A0CF-E1591C6F3C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1CBD01E-95D4-4526-A5D9-F64516AA3575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1CBD01E-95D4-4526-A5D9-F64516AA3575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1CBD01E-95D4-4526-A5D9-F64516AA3575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1CBD01E-95D4-4526-A5D9-F64516AA3575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
