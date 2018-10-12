@@ -10,7 +10,7 @@ namespace Triangle
     {
         static void Main(string[] args)
         {
-            int hauteur, caraTotal, caraLigne;
+            int hauteur, caraTotal, caraLigne, ligneActuelle = 1;
 
             Console.WriteLine("Hauteur?");
             hauteur = Convert.ToInt32(Console.ReadLine());
@@ -21,11 +21,7 @@ namespace Triangle
 
             for (int i = 1; i <= caraTotal; i++)
             {
-                bool eval = i < (hauteur - i);
-                if (eval)
-                {
-
-                }
+                
             }
         }
     }
