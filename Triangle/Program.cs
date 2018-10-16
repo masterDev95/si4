@@ -10,40 +10,34 @@ namespace Triangle
     {
         static void Main(string[] args)
         {
-            int hauteur, caraTotal, caraLigne, ligneActuelle = -1;
+            int hauteur;
 
             Console.WriteLine("Hauteur?");
             hauteur = Convert.ToInt32(Console.ReadLine());
-            caraLigne = hauteur + hauteur - 1;
-            caraTotal = caraLigne * hauteur;
 
             Console.WriteLine("\n");
 
-            for (int i = 1; i <= caraTotal; i++)
+            for (int i = 1; i <= hauteur; i++)
             {
-                if (i % (hauteur * 2) - 1 == 0)
-                {
-                    Console.WriteLine("");
-                    ligneActuelle++;
-                }
-
-                bool eval1 = i < hauteur || i > hauteur && i < hauteur * 2;
-                bool eval2 = i > hauteur * (ligneActuelle + 1) && i < (hauteur * 2 * (ligneActuelle + 1)) - 1;
-                bool eval3 = i > hauteur * 2 * (ligneActuelle + 1) && i < (hauteur * 3 * (ligneActuelle + 1)) - 1;
-
-                if (eval1)
+                for (int j = 0; j < hauteur - i; j++)
                 {
                     Console.Write("-");
                 }
-                else if (eval2 || eval3)
-                {
-                    Console.Write("-");
-                }
-                else
+
+                for (int k = 0; k < i * 2 - 1; k++)
                 {
                     Console.Write("*");
                 }
+
+                for (int l = 0; l < hauteur - i; l++)
+                {
+                    Console.Write("-");
+                }
+
+                Console.WriteLine("\n");
             }
+
+            Console.WriteLine("\n");
         }
     }
 }
