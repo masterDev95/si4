@@ -26,7 +26,7 @@ namespace TP4
             //2
             Console.WriteLine("\nVoici ce que vous avez saisi:");
 
-            for (int i = 0; i < tableau.Count(); i++)
+            for (int i = 0; i < tableau.Length; i++)
             {
                 Console.WriteLine(tableau[i]);
             }
@@ -34,7 +34,7 @@ namespace TP4
             //3
             Console.WriteLine("\nVoici ce que vous avez saisi (1 valeur sur 2):");
 
-            for (int i = 0; i < tableau.Count(); i++)
+            for (int i = 0; i < tableau.Length; i++)
             {
                 if (affiche) Console.WriteLine(tableau[i]);
                 affiche = !affiche;
@@ -43,7 +43,7 @@ namespace TP4
             //4
             Console.WriteLine("\nVoici les paires de ce que vous avez saisi:");
 
-            for (int i = 0; i < tableau.Count(); i++)
+            for (int i = 0; i < tableau.Length; i++)
             {
                 if (tableau[i] % 2 == 0) Console.WriteLine(tableau[i]);
             }
@@ -68,7 +68,7 @@ namespace TP4
             Console.WriteLine("\nVoici les nombres premiers que vous avez saisi:");
 
             //SUPPRESSION VALEURES NON PREMIERES
-            for (int i = 0; i < tableau.Count(); i++)
+            for (int i = 0; i < tableau.Length; i++)
             {
                 if (tableau[i] == 1)
                 {
