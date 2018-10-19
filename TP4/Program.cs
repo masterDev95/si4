@@ -10,6 +10,7 @@ namespace TP4
     {
         static void Main(string[] args)
         {
+            //1
             int[] tableau = new int[10];
             int[] aEnlever = new int[10];
             string saisie;
