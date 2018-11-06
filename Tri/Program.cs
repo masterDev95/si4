@@ -10,7 +10,16 @@ namespace Tri
     {
         static void Main(string[] args)
         {
-            int[] tableau = new int[] { 50, 49, 48, 47, 46 };
+            int[] tableau = new int[10];
+
+            Console.WriteLine("Veuillez saisir 10 chiffres :");
+
+            for (int i = 0; i < tableau.Length; i++)
+            {
+                tableau[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("");
 
             for (int i = 0; i < tableau.Length - 1; i++)
             {
@@ -25,7 +34,7 @@ namespace Tri
                     }
                 }
             }
-            
+
             for (int i = 0; i < tableau.Length; i++)
             {
                 Console.WriteLine(tableau[i]);
