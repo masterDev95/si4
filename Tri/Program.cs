@@ -10,9 +10,9 @@ namespace Tri
     {
         static void Main(string[] args)
         {
-            int[] tableau = new int[10];
+            int[] tableau = new int[5];
 
-            Console.WriteLine("Veuillez saisir 10 chiffres :");
+            Console.WriteLine("Veuillez saisir 5 chiffres :");
 
             for (int i = 0; i < tableau.Length; i++)
             {
