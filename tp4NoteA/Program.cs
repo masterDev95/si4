@@ -10,7 +10,27 @@ namespace tp4NoteA
     {
         static void Main(string[] args)
         {
-            Exercice2();
+            int choix;
+
+            Console.WriteLine("\t-Exercice 1 (1)");
+            Console.WriteLine("\t-Exercice 2 (2)");
+
+            Console.WriteLine("Veuillez choisir la fonction que vous voulez (1-2)");
+            choix = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            switch (choix)
+            {
+                case 1:
+                    Exercice1();
+                    break;
+                case 2:
+                    Exercice2();
+                    break;
+                default:
+                    Console.WriteLine("Désolé, je n'ai pas compris votre requête..");
+                    break;
+            }
         }
 
         private static void Exercice2()
