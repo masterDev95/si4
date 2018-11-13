@@ -14,8 +14,8 @@ namespace Snake
             string snake = "*";
             ConsoleKeyInfo toucheAppuye;
             int x = Console.WindowWidth / 2, y = Console.WindowHeight / 2;
-            int dir = 0, timer = 1, alarm = timer; // direction: 0 gauche, 1 droite, 2 haut, 3 bas
-            int time1 = DateTime.Now.Millisecond, time2;
+            int dir = 0; // direction: 0 gauche, 1 droite, 2 haut, 3 bas
+            int time1 = DateTime.Now.Millisecond, time2, timer = 125;
 
             Console.CursorVisible = false;
             Console.SetCursorPosition(x, y);
@@ -47,17 +47,10 @@ namespace Snake
                 }
 
                 time2 = DateTime.Now.Millisecond;
-                //Console.WriteLine(DateTime.Now.Second);
 
-                if (time2 == (time1 + 250) % 1000)
-                {
-                    alarm--;
-                    time1 = DateTime.Now.Millisecond;
-                }
+                bool eval = (time2 == (time1 + timer) % 1000) && (x > 0 && y > 0);
 
-                bool eval = x > 0 && y > 0;
-
-                if (alarm <= 0 && eval)
+                if (eval)
                 {
                     switch (dir)
                     {
@@ -79,7 +72,7 @@ namespace Snake
                     Console.SetCursorPosition(x, y);
                     Console.Write(snake);
 
-                    alarm = timer;
+                    time1 = DateTime.Now.Millisecond;
                 }
             } while (true);
         }
