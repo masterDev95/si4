@@ -10,6 +10,7 @@ namespace TP_Collection
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
