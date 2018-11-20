@@ -17,7 +17,8 @@ namespace TP_Polybe
                 "q","r","s","t","u",
                 "v","w","x","y","z"
             };
-            string total_word = "hello world", word, translate = "";
+            string word, translate = "";
+            string total_word = Console.ReadLine();
             string[] split = total_word.Split();
 
             for (int i = 0; i < split.Length; i++)
