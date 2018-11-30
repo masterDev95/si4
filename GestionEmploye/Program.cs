@@ -77,6 +77,7 @@ namespace GestionEmploye
 
         }
 
+        //-- AFFICHAGE SERVICES
         private static void AfficherService(List<Service> collectionService)
         {
             int i = 1;
@@ -90,6 +91,7 @@ namespace GestionEmploye
             Console.WriteLine();
         }
 
+        //-- AJOUT SERVICE
         private static void AjouterService(List<Service> collectionService)
         {
             Service unService = new Service();
@@ -100,6 +102,7 @@ namespace GestionEmploye
             collectionService.Add(unService);
         }
 
+        //-- SUPPRESSION EMPLOYE
         private static void SupprimerEmploye(List<Employe> collectionEmploye)
         {
             Employe suprEmploye = new Employe();
@@ -122,6 +125,7 @@ namespace GestionEmploye
             }
         }
 
+        //-- MODIFICATION EMPLOYE
         private static void ModifierEmploye(List<Employe> collectionEmploye, List<Service> collectionService)
         {
             Employe modEmploye = new Employe();
@@ -144,6 +148,7 @@ namespace GestionEmploye
             }
         }
 
+        //-- AFFICHAGE EMPLOYE
         private static void AfficherEmploye(List<Employe> collectionEmploye)
         {
             foreach (Employe employeCourant in collectionEmploye)
@@ -157,6 +162,7 @@ namespace GestionEmploye
             }
         }
 
+        //--AJOUT EMPLOYE
         private static void AjouterEmploye(List<Employe> collectionEmploye, List<Service> collectionService)
         {
             Employe unEmploye = new Employe();
