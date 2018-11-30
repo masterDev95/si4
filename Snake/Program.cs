@@ -11,7 +11,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            string snake = "*";
+            string snake = "****";
             ConsoleKeyInfo toucheAppuye;
             int x = Console.WindowWidth / 2, y = Console.WindowHeight / 2;
             int dir = 0; // direction: 0 gauche, 1 droite, 2 haut, 3 bas
