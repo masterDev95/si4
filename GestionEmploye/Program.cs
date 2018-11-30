@@ -45,13 +45,13 @@ namespace GestionEmploye
                 switch (choix)
                 {
                     case "1":
-                        AjouterEmploye(collectionEmploye);
+                        AjouterEmploye(collectionEmploye, collectionService);
                         break;
                     case "2":
                         AfficherEmploye(collectionEmploye);
                         break;
                     case "3":
-                        ModifierEmploye(collectionEmploye);
+                        ModifierEmploye(collectionEmploye, collectionService);
                         break;
                     case "4":
                         AjouterService(collectionService);
@@ -65,6 +65,7 @@ namespace GestionEmploye
                     case "0":
                         continuer = false;
                         Persistance.Sauvegarde(collectionEmploye);
+                        Persistance.Sauvegarde(collectionService);
                         break;
                     default:
                         break;
@@ -78,11 +79,15 @@ namespace GestionEmploye
 
         private static void AfficherService(List<Service> collectionService)
         {
+            int i = 1;
+
             foreach (Service serviceCourant in collectionService)
             {
-                Console.WriteLine(serviceCourant.NomService);
-                Console.WriteLine();
+                Console.WriteLine(i + " - " + serviceCourant.NomService);
+                i++;
             }
+
+            Console.WriteLine();
         }
 
         private static void AjouterService(List<Service> collectionService)
@@ -117,7 +122,7 @@ namespace GestionEmploye
             }
         }
 
-        private static void ModifierEmploye(List<Employe> collectionEmploye)
+        private static void ModifierEmploye(List<Employe> collectionEmploye, List<Service> collectionService)
         {
             Employe modEmploye = new Employe();
 
@@ -133,7 +138,7 @@ namespace GestionEmploye
                     && employeCourant.PrenomEmploye == modEmploye.PrenomEmploye)
                 {
                     collectionEmploye.Remove(employeCourant);
-                    AjouterEmploye(collectionEmploye);
+                    AjouterEmploye(collectionEmploye, collectionService);
                     break;
                 }
             }
@@ -147,11 +152,12 @@ namespace GestionEmploye
                 Console.WriteLine(employeCourant.NomEmploye);
                 Console.WriteLine(employeCourant.PrenomEmploye);
                 Console.WriteLine(employeCourant.SalaireEmploye);
+                Console.WriteLine(employeCourant.ServiceEmploye.NomService);
                 Console.WriteLine();
             }
         }
 
-        private static void AjouterEmploye(List<Employe> collectionEmploye)
+        private static void AjouterEmploye(List<Employe> collectionEmploye, List<Service> collectionService)
         {
             Employe unEmploye = new Employe();
 
@@ -166,6 +172,14 @@ namespace GestionEmploye
 
             Console.WriteLine("\nSalaire");
             unEmploye.SalaireEmploye = Convert.ToDecimal(Console.ReadLine());
+
+            AfficherService(collectionService);
+
+            Console.WriteLine("\nService");
+            int selectService = Convert.ToInt32(Console.ReadLine());
+
+            unEmploye.ServiceEmploye = collectionService[selectService-1];
+          
 
             collectionEmploye.Add(unEmploye);
         }
