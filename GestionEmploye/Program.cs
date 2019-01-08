@@ -38,6 +38,7 @@ namespace GestionEmploye
                 Console.WriteLine();
                 Console.WriteLine("\t6 - Supprimer employé");
                 Console.WriteLine("\t7 - Affichage employé par service");
+                Console.WriteLine("\t8 - Affichage employé par salaire");
                 Console.WriteLine();
                 Console.WriteLine("\t0 - Fermer le programme");
                 string choix = Console.ReadLine();
@@ -69,6 +70,9 @@ namespace GestionEmploye
                     case "7":
                         AffichageEmployeService(collectionEmploye, collectionService);
                         break;
+                    case "8":
+
+                        break;
                     case "0":
                         continuer = false;
                         Persistance.Sauvegarde(collectionEmploye);
@@ -84,6 +88,13 @@ namespace GestionEmploye
 
         }
 
+        //-- AFFICHAGE EMPLOYE PAR SALAIRE
+        private static void AffichageEmployeSalaire(List<Employe> collectionEmploye)
+        {
+
+        }
+
+        //-- AFFICHAGE EMPLOYE PAR SERVICE
         private static void AffichageEmployeService(List<Employe> collectionEmploye, List<Service> collectionService)
         {
             int i = 0;
@@ -133,6 +144,8 @@ namespace GestionEmploye
         //-- SUPPRESSION EMPLOYE
         private static void SupprimerEmploye(List<Employe> collectionEmploye)
         {
+            AfficherEmploye(collectionEmploye);
+
             Console.WriteLine("Nom:");
             string nomEmploye = Console.ReadLine();
 
@@ -145,7 +158,6 @@ namespace GestionEmploye
                     && employeCourant.PrenomEmploye == prenomEmploye)
                 {
                     collectionEmploye.Remove(employeCourant);
-                    Console.WriteLine("Supr");
                     break;
                 }
             }
