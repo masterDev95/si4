@@ -70,9 +70,18 @@ namespace lecteurFichier
                         Console.WriteLine("Nom:");
 
                         unContact[0] = Console.ReadLine();
+                        
+                        do
+                        {
+                            Console.WriteLine("Tel:");
+                            unContact[1] = Console.ReadLine();
 
-                        Console.WriteLine("Tel:");
-                        unContact[1] = Console.ReadLine();
+                            if (unContact[1].Length != 10)
+                            {
+                                Console.WriteLine("Veuillez entrer un numéro valide !!!");
+                                Console.WriteLine();
+                            }
+                        } while (unContact[1].Length != 10);
 
                         Console.WriteLine("Adresse:");
                         unContact[2] = Console.ReadLine();
