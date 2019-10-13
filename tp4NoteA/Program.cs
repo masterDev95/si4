@@ -12,13 +12,13 @@ namespace tp4NoteA
         {
             int choix;
 
+        Choix:
             Console.WriteLine("\t-Exercice 1 (1)");
             Console.WriteLine("\t-Exercice 2 (2)");
 
             Console.WriteLine("Veuillez choisir la fonction que vous voulez (1-2)");
             choix = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
-
             switch (choix)
             {
                 case 1:
@@ -28,8 +28,8 @@ namespace tp4NoteA
                     Exercice2();
                     break;
                 default:
-                    Console.WriteLine("Désolé, je n'ai pas compris votre requête..");
-                    break;
+                    Console.WriteLine("Désolé, je n'ai pas compris votre requête..\n");
+                    goto Choix;
             }
         }
 
